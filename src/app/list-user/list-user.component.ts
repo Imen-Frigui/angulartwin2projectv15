@@ -69,13 +69,6 @@ export class ListUserComponent {
   delete(pos:number){
     this.users.splice(pos,1);
   }
-  onChange(changedDropdown: string) {
-    if (changedDropdown === 'nameFilter') {
-      this.nameFilter = "nameFilter";
-    } else {
-      this.categoryFilter = "categoryFilter";
-    }
-  }
   
   get filteredUsers(): User[] {
     return this.users.filter(user =>

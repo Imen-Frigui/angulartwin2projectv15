@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FormsModule } from '@angular/forms';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HeaderComponent,
     ListUserComponent,
-    AccountsComponent
+    AccountsComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, TestComponentComponent, AccountsComponent, HeaderComponent, ListUserComponent,FooterComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
