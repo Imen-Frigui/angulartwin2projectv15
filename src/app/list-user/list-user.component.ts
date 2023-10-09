@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { User } from '../model/User';
+import { Input } from '@material-ui/core';
 
 @Component({
   selector: 'app-list-user',
   templateUrl: './list-user.component.html',
-  styleUrls: ['./list-user.component.css']
+  styleUrls: ['./list-user.component.css'],
 })
 export class ListUserComponent {
   users: User[]=
@@ -61,6 +62,9 @@ export class ListUserComponent {
     }
   ]
   categoryFilter: string = '';
+  nameFilter: string = '';
+  selectedValue: string = '';
+
 
   delete(pos:number){
     this.users.splice(pos,1);
@@ -69,6 +73,11 @@ export class ListUserComponent {
   get filteredUsers(): User[] {
     return this.users.filter(user =>
       user.accountCategory.toLowerCase().includes(this.categoryFilter.toLowerCase())
+    );
+  }
+  get filterdName(): User[] {
+    return this.users.filter(user =>
+      user.lastName.toLowerCase().includes(this.nameFilter.toLowerCase())
     );
   }
     
