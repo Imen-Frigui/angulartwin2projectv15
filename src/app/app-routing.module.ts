@@ -6,7 +6,9 @@ import { ListUserComponent } from './list-user/list-user.component';
 
 const routes: Routes = [
   {path: 'home', component: SliderComponent },
-  {path: 'accounts', component: AccountsComponent },
+  {path: 'accounts', component: AccountsComponent,children:[
+    {path:'users', component:ListUserComponent}
+  ] },
   {path: 'users', component: ListUserComponent }
 ]
 
