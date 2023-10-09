@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { User } from '../model/User';
-import { Input } from '@material-ui/core';
 
 @Component({
   selector: 'app-list-user',
@@ -61,13 +60,21 @@ export class ListUserComponent {
       profession: "Software Engineer" 
     }
   ]
+
   categoryFilter: string = '';
   nameFilter: string = '';
-  selectedValue: string = '';
-
+  categoryFilterr: string = '';
+  nameFilterr: string = '';
 
   delete(pos:number){
     this.users.splice(pos,1);
+  }
+  onChange(changedDropdown: string) {
+    if (changedDropdown === 'nameFilter') {
+      this.nameFilter = "nameFilter";
+    } else {
+      this.categoryFilter = "categoryFilter";
+    }
   }
   
   get filteredUsers(): User[] {

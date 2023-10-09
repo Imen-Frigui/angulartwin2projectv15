@@ -6,16 +6,15 @@
             
             <div class="search-container">
                 <label for="categorySearch">Search by Category:</label>
-                <input type="text" id="categorySearch" [(ngModel)]="categoryFilter">
-				<select id="search" [(ngModel)]="selectedValue">
-					<option [ngValue]="categoryFilter">categoryFilter
+				<input type="text" id="categorySearch" [(ngModel)]="categoryFilter">
+				<select aria-label="seaerch" id="search" (change)="onChange('nameFilter')" [(ngModel)]="categoryFilter">
+					<option [ngValue]="categoryFilterr">categoryFilter
 						<input type="text" id="categorySearch" [(ngModel)]="categoryFilter">
 					</option>
-					<option [ngValue]="nameFilter">nameFilter
-						<input type="text" id="categorySearch" [(ngModel)]="nameFilter">
+					<option [ngValue]="nameFilterr">nameFilter
+						<input placeholder="lastNameFilter" type="text" id="nameSearch" [(ngModel)]="nameFilter">
 					</option>
 				</select>
-				
             </div>
 			<div class="table-responsive">
 				<table class="table user-list">
