@@ -10,6 +10,7 @@ import { ListUserComponent } from './list-user/list-user.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SliderComponent } from './slider/slider.component';
     HeaderComponent,
     ListUserComponent,
     AccountsComponent,
-    SliderComponent
+    SliderComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

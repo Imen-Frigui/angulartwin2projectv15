@@ -3,13 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { SliderComponent } from './slider/slider.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { ListUserComponent } from './list-user/list-user.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
+  {path: '', redirectTo:"home", pathMatch:"full" },
   {path: 'home', component: SliderComponent },
   {path: 'accounts', component: AccountsComponent,children:[
-    {path:'users', component:ListUserComponent}
+    {path:'users/:category', component:ListUserComponent}
   ] },
-  {path: 'users', component: ListUserComponent }
+  {path: 'users', component: ListUserComponent },
+  {path:"**", component: NotFoundComponent}
 ]
 
 @NgModule({
